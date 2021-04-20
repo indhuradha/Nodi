@@ -1,0 +1,133 @@
+#!//d:/restapi/ecosystem.config.js
+
+/*START#############################################
+#
+#  Purpose  : Process file which will set the mode to development or environment
+#
+#  Author   : Ranjitha
+#
+#  Client   : SPS
+#
+#  Date     : December 18, 2019
+#
+*/
+
+
+module.exports = {
+    apps: [
+        {
+            name: "nodi-api-new",
+            script: "./server.js",
+            watch: true,
+            exec_mode: "fork",
+            env_development: {
+				"port": "3002",
+				"node_env": "development",
+				"filePath": "D:/opt/",
+				"forkPath": "D:/New_reference_103/2021/routes/forkapis/",
+				"imagePath": "images",
+				"imageServerPath": "https://nodiuat.sps.co.in",
+				"arsServer": "10.110.4.164",
+				"arsServerPort": 8088,
+				"arsPath": "/refconv",
+				"refmlServer": "10.110.4.164",
+				"refmlServerPort": 8088,
+				"refmlPath" : "/RefbusWeb/rest/refbus/springer?journame=",
+				"refRecal" : "https://nodiuat.sps.co.in:3001/nodi-spr/reference/",
+				"spellServer" : "http://nodiuat.sps.co.in:8081/v2/check",
+				"html2xmlServer": "http://nodiuat.sps.co.in:8086/html2xml",
+				"cslclient": "http://nodiuat.sps.co.in:8090/CSLXMLinput",
+				"sortServer": "http://nodiuat.sps.co.in:3002/newSortAbbrivate",
+				"serveImageNotfoundfile": "/opt/nodi-api-new/images/NoImage4.png",
+				"content_checker_server": "http://10.110.3.250:8072/ContentCheckerService/ContentChecker",
+				"uploadfilepath": "/opt/edit_data/",
+				"xml2htmlServer": "http://nodiuat.sps.co.in:8086/xml2html",
+				"logPath": "/var/logs/nodi/",
+				"cslserver": "http://nodiuat.sps.co.in:8085?responseformat=json&style=",
+                "kibanaServer": "http://10.110.25.105:9200",
+                "hostName" : "nodiuat.sps.co.in",
+				"processAffiliationServer"  : "http://10.110.4.164:8070/api/processAffiliations",
+                "trackChange" : "/opt/daisydiff/",
+                "xml2htmlServerCorr": "http://nodiuat.sps.co.in:8086/xml2htmlcorr",
+                "nodiindesignServer" : "https://gandhi.sps.co.in:8084/nodiindesign",
+                "copyXMLServer" : "https://soft-hyper.sps.co.in:8082/copyXML",
+                "html2xmlCorrServer" :  "http://nodiuat.sps.co.in:8086/html2xmlcorr",
+				"pageExpressServer" : "https://elseiis.sps.co.in:8080/gettexupload",
+				"nodiSupportingServer" :  "https://soft-hyper.sps.co.in:8082/prepareContentForPDF?api_type=",
+				"xml2htmlServerBooks": "http://nodiuat.sps.co.in:8086/xml2htmlbks",
+                "html2xmlServerBooks" :  "http://nodiuat.sps.co.in:8086/html2xmlbks",
+                "xml2htmlServerBooksCorr" : "http://nodiuat.sps.co.in:8086/xml2htmlbkscorr",
+                "html2xmlServerBooksCorr" : "http://nodiuat.sps.co.in:8086/html2xmlbkscorr",
+                "checkTexServer" : "http://10.110.25.103:8087/chktex",
+                "ce" : "jnls_ce/",
+                "act" : "jnls_act/",
+            "ce-pgx": "jnls_ce/",
+            "act-pgx": "jnls_act/",
+                "bk-ce" : "books_ce/",
+                "bk-act" : "books_act/",
+            "bk-ce-pgx": "books_ce/",
+            "bk-act-pgx": "books_act/",
+                "chennai":{"customer":"spr-jwf","location":"chennai"},
+                "trichy":{"customer":"spr-jwf","location":"trichy"},
+                "updateDB_url":"https://soft-hyper.sps.co.in:8085/api/updateDB",
+            	"esmList_url": "https://soft-hyper.sps.co.in:8082/listesm",
+            	"esmRename_url": "https://soft-hyper.sps.co.in:8082/renameESM",
+                "dbPath": "D:/New_reference_103/2021/dbconfig/",
+            },
+            env_production: {
+				"port": "3001",
+				"node_env": "production",
+				"filePath": "/opt/edit_data/",
+				"forkPath": "/opt/nodi-api-new/router/forkapis/",
+				"imagePath": "images",
+				"imageServerPath": "https://nodi.sps.co.in",
+				"arsServer": "10.110.4.164",
+				"arsServerPort": 8088,
+				"arsPath": "/refconv",
+				"refmlServer": "10.110.4.164",
+				"refmlServerPort": 8088,
+				"refmlPath" : "/RefbusWeb/rest/refbus/springer?journame=",
+				"refRecal" : "https://nodi.sps.co.in:3001/reference/",
+				"spellServer" : "http://nodi.sps.co.in:8081/v2/check",
+				"html2xmlServer": "http://nodi.sps.co.in:8086/html2xml",
+				"cslclient": "http://nodi.sps.co.in:8082/CSLXMLinput",
+				"sortServer": "http://nodi.sps.co.in:3002/newSortAbbrivate",
+				"serveImageNotfoundfile": "/opt/nodi-api-new/images/NoImage4.png",
+				"content_checker_server": "http://10.110.3.250:8072/ContentCheckerService/ContentChecker",
+				"uploadfilepath": "/opt/edit_data/",
+				"xml2htmlServer": "http://nodi.sps.co.in:8086/xml2html",
+				"logPath": "/var/logs/nodi/",
+				"cslserver": "http://nodi.sps.co.in:8080?responseformat=json&style=",
+                "kibanaServer": "http://10.110.25.103:9200",
+                "hostName" : "nodi.sps.co.in",
+				"processAffiliationServer"  : "http://10.110.4.164:8070/api/processAffiliations",
+                "trackChange" : "/opt/daisydiff/",
+                "xml2htmlServerCorr": "http://nodi.sps.co.in:8086/xml2htmlcorr",
+                "nodiindesignServer" : "https://gandhi.sps.co.in:8084/nodiindesign",
+                "copyXMLServer" : "https://elseiis.sps.co.in:8082/copyXML",
+                "html2xmlCorrServer" :  "http://nodi.sps.co.in:8086/html2xmlcorr",
+				"pageExpressServer" : "https://elseiis.sps.co.in:8080/gettexupload",
+				"nodiSupportingServer" :  "https://elseiis.sps.co.in:8082/prepareContentForPDF?api_type=",
+				 "xml2htmlServerBooks": "http://nodi.sps.co.in:8086/xml2htmlbks",
+				"html2xmlServerBooks" :  "http://nodi.sps.co.in:8086/html2xmlbks",
+                "xml2htmlServerBooksCorr" : "http://nodi.sps.co.in:8086/xml2htmlbkscorr",
+                "html2xmlServerBooksCorr" : "http://nodi.sps.co.in:8086/html2xmlbkscorr",
+                "checkTexServer" : "http://10.110.25.103:8087/chktex",
+                "ce" : "jnls_ce/",
+                "act" : "jnls_act/",
+            "ce-pgx": "jnls_ce/",
+            "act-pgx": "jnls_act/",
+                "bk-ce" : "books_ce/",
+                "bk-act" : "books_act/",
+            "bk-ce-pgx": "books_ce/",
+            "bk-act-pgx": "books_act/",
+                "chennai":{"customer":"spr-jwf","location":"chennai"},
+                "trichy":{"customer":"spr-jwf","location":"trichy"},
+                "updateDB_url":"https://elseiis.sps.co.in:8083/api/updateDB",
+            	"esmList_url": "https://elseiis.sps.co.in:8082/listesm",
+            	"esmRename_url": "https://elseiis.sps.co.in:8082/renameESM",
+                "dbPath": "/opt/nodi-api-new/dbconfig/"
+            }
+        }
+    ]
+}

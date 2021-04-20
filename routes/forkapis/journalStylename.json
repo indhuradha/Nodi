@@ -1,0 +1,18 @@
+
+
+{ "apa-5th-edition-withoutsort":"WithoutChanges",
+    "apa-5th-edition-withsort":"WithoutChanges",
+    "chicago-author-date-16th-edition-withsort":"WithoutChanges",
+    "chicago-author-date-16th-edition-withoutsort":"WithoutChanges",
+    "springer-mathphys-author-date-withoutsort":"WithChanges",
+    "springer-mathphys-author-date-withsort":"WithChanges",
+    "american-physics-society-withoutsort":"WithChanges",
+    "american-physics-society-withsort":"WithChanges",
+    "vancouver-author-date-withoutsort":"WithoutDotChanges",
+    "vancouver-author-date-withsort":"WithoutDotChanges",
+    "springer-basic-author-date-journal-withoutsort":"WithoutDotChanges",
+    "springer-basic-author-date-journal-withsort":"WithoutDotChanges",
+    "springer-basic-author-date-withoutsort":"WithoutDotChanges",
+    "springer-basic-author-date-withsort":"WithoutDotChanges"
+
+}

@@ -1,0 +1,11 @@
+{
+    "Basic": "springer-basic-author-date-journal-withsort",
+    "Chemistry": "springer-basic-author-date-journal-withsort",
+    "APA": "apa-5th-edition-withsort",
+    "APS": "american-physics-society-withsort",
+    "MathPhys": "springer-mathphys-author-date-withsort",
+    "MathPhysSci": "springer-mathphys-author-date-journal-withoutsort",
+    "Vancouver": "vancouver-author-date-withsort",
+    "Chicago": "chicago-author-date-16th-edition-withsort",
+    "AsInManuscript": "AsInManuscript"
+}
